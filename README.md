@@ -30,8 +30,8 @@ If you don't see the screenshots here, check the screenshots folder 📁
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Frontend Mentor](https://your-solution-url.com)
+- Live Site URL: [Netlify](https://elaborate-daffodil-0996ef.netlify.app/)
 
 ## My process
 
