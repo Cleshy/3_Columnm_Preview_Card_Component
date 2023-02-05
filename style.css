@@ -1,0 +1,157 @@
+/* ============== *\
+   Base Styles
+\* ============== */
+
+:root {
+  --orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  --light-gray: hsl(0, 0%, 95%);
+  --body-font-size: 1.5rem;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; /* 10px */
+}
+
+body {
+  height: 100vh;
+  background-color: var(--light-gray);
+  font-size: var(--body-font-size);
+  font-family: "Lexend Deca", sans-serif;
+  color: var(--transparent-white);
+  display: grid;
+  place-items: center;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+.container {
+  max-width: 144rem;
+}
+
+/* ============== *\
+   Cards
+\* ============== */
+
+.cards {
+  max-width: 92rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.card {
+  padding: 4.8rem;
+}
+
+.card-title {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: "Big Shoulders Display", cursive;
+  font-size: 4rem;
+  color: var(--light-gray);
+  padding: 3.5rem 0 2.5rem 0;
+}
+
+.card-description {
+  line-height: 2.5rem;
+  padding-bottom: 8.3rem;
+}
+
+.card--1 {
+  background-color: var(--orange);
+  border-top-left-radius: 0.8rem;
+  border-bottom-left-radius: 0.8rem;
+}
+
+.card--2 {
+  background-color: var(--dark-cyan);
+}
+
+.card--3 {
+  background-color: var(--very-dark-cyan);
+  border-top-right-radius: 0.8rem;
+  border-bottom-right-radius: 0.8rem;
+}
+
+.btn {
+  padding: 1.1rem 3.15rem;
+  border-radius: 22.5rem;
+  border: 2px solid transparent;
+  cursor: pointer;
+  background-color: var(--light-gray);
+  line-height: 2.5rem;
+}
+
+.card--1 .btn {
+  color: var(--orange);
+}
+
+.card--2 .btn {
+  color: var(--dark-cyan);
+}
+
+.card--3 .btn {
+  color: var(--very-dark-cyan);
+}
+
+.btn:hover {
+  border-color: var(--transparent-white);
+  color: var(--light-gray);
+  background-color: transparent;
+}
+
+/* ============== *\
+   Media Queries
+\* ============== */
+
+@media screen and (max-width: 900px) {
+  .cards {
+    grid-template-columns: 1fr;
+    padding: 8.8rem 2.4rem 15rem 2.4rem;
+  }
+
+  /* I have no idea why border-radius doesn't work on the cards container 😔 */
+
+  .card--1 {
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0.8rem;
+  }
+
+  .card--3 {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .cards {
+    padding: 8.8rem 2.4rem 8rem 2.4rem;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .cards {
+    padding: 8.8rem 2.4rem 4rem 2.4rem;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .cards {
+    padding: 8.8rem 2.4rem 2.4rem 2.4rem;
+  }
+}
